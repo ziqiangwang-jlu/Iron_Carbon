@@ -1,0 +1,159 @@
+#-----------------------
+#
+#Note: Please make sure that the initial interstitial sites, which are considered as the starting point are stable 
+#energetically. The position of a carbon atom after the relaxation is output into the start_site.txt
+#Only if the diffuse distance greater than a quarter of lattice constant is considered as reasonable 
+#In this case, the displacement threshold is 1.0A
+#The dot product is the nineth order which should not be too small
+#
+#------------------------
+
+# the step size should be larger otherwise the number of the energy minimum sites is smaller
+variable                delta             equal     0.03
+variable                iter_tot          equal     80
+
+label                   loop
+variable                seed              loop      305 319     # 20 simulations
+variable                iteration         loop      ${iter_tot} # The maximum ietration number per random direction
+
+clear
+units                   metal
+atom_style              atomic
+dimension                   3
+boundary                p p p
+atom_modify             map array sort 0 0.0 
+
+read_data               poslmp_carbon.dat
+
+variable                zmax     equal    zhi
+variable                zmin     equal    zlo
+
+region                  inner   cylinder   z  1.16564  0.67298333  100.0  ${zmin}  ${zmax}  units  box
+group                   inner   region     inner
+group                   outer   subtract   all  inner
+group                   carbon  type       2
+
+pair_style              eam/alloy
+pair_coeff              * * FeC-Becquart2013.eam.txt Fe C
+neighbor                0.3 bin
+neigh_modify            delay 0 check yes every 1
+
+compute                 force     carbon   reduce  sum  fx fy fz
+variable                fx    equal    c_force[1]
+variable                fy    equal    c_force[2]
+variable                fz    equal    c_force[3]
+
+fix                     force    outer    setforce      0.0 0.0 0.0
+thermo_style            custom   step     v_fx v_fy v_fz pe ke etotal 
+min_style               cg
+minimize                1.0e-30 1.0e-30 10000 10000
+#write_data              minimize.dat
+#quit
+
+variable                fx_0  equal    ${fx}
+variable                fy_0  equal    ${fy}
+variable                fz_0  equal    ${fz}
+
+variable                i     equal    288751
+
+variable                x0    equal    x[v_i]
+variable                y0    equal    y[v_i]
+variable                z0    equal    z[v_i]
+
+variable                x     equal    x[v_i]+v_delta*random(-1.0,1.0,${seed})
+variable                y     equal    y[v_i]+v_delta*random(-1.0,1.0,${seed})
+variable                z     equal    z[v_i]+v_delta*random(-1.0,1.0,${seed})
+variable                x_0    equal     ${x0}
+variable                y_0    equal     ${y0}
+variable                z_0    equal     ${z0}
+variable                x_1    equal     $x
+variable                y_1    equal     $y
+variable                z_1    equal     $z
+
+set                atom        $i    x  ${x_1}  y  ${y_1}  z  ${z_1}
+variable           vector_x          equal     ${x_1}-${x_0}
+variable           vector_y          equal     ${y_1}-${y_0}
+variable           vector_z          equal     ${z_1}-${z_0}
+
+#dump               1     all   custom   1000   dump_minimize.atom.* id type x y z
+#dump_modify        1     element  Fe C
+thermo_style       custom   step  pe ke etotal v_fx v_fy v_fz
+thermo             1000
+
+fix                hold    carbon   planeforce   ${vector_x}  ${vector_y}  ${vector_z}
+min_style          cg
+minimize           1.0e-30 1.0e-30 10000 10000
+unfix              hold
+
+variable           new_x         equal     ${x0}-${x_0}
+variable           new_y         equal     ${y0}-${y_0}
+variable           new_z         equal     ${z0}-${z_0}
+
+label iteration
+variable           norm          equal     sqrt(${new_x}^2+${new_y}^2+${new_z}^2)
+variable           unit_x        equal     ${new_x}/${norm}
+variable           unit_y        equal     ${new_y}/${norm}
+variable           unit_z        equal     ${new_z}/${norm}
+variable           x_new         equal     ${x0}+${delta}*${unit_x}
+variable           y_new         equal     ${y0}+${delta}*${unit_y}
+variable           z_new         equal     ${z0}+${delta}*${unit_z}
+
+#include            update_position.mod
+set                atom          $i    x  ${x_new}  y  ${y_new}  z   ${z_new} 
+fix                hold    carbon   planeforce   ${new_x}  ${new_y}  ${new_z}
+min_style          cg
+minimize           1.0e-30 1.0e-30 10000 10000
+unfix              hold
+
+variable           new_x         delete
+variable           new_y         delete
+variable           new_z         delete
+variable           dot           delete
+variable           new_x         equal     ${x0}-${x_0}
+variable           new_y         equal     ${y0}-${y_0}
+variable           new_z         equal     ${z0}-${z_0}
+variable           module        equal     sqrt(${new_x}*${new_x}+${new_y}*${new_y}+${new_z}*${new_z})
+variable           unitx         equal     ${new_x}/${module}
+variable           unity         equal     ${new_y}/${module}
+variable           unitz         equal     ${new_z}/${module}
+variable           f_module      equal     sqrt(${fx}*${fx}+${fy}*${fy}+${fz}*${fz})
+variable           dir_module    equal     sqrt(${unitx}*${unitx}+${unity}*${unity}+${unitz}*${unitz})
+
+variable           dot      equal     ${fx}*${unitx}+${fy}*${unity}+${fz}*${unitz}
+variable           cos      equal     ${dot}/${f_module}*${dir_module}
+variable           radian   equal     acos(${cos})
+variable           angle    equal     (${radian}/PI)*180
+print              "The dot product: ${dot}"
+print              "The cos of the angle between the force vector and the displacement vector: ${cos}"
+print              "The angle: ${angle}"
+
+if "(${dot} >= 0.0) && (${dot} < 1.0e-9)" then "jump TaR.in relaxation" & 
+elif "(${dot} >= 0.0) && (${dot} > 1.0e-4)" "jump TaR.in relaxation" &
+elif "(${dot} < 0.0) && (${dot} > -1.0e-9)" "jump TaR.in relaxation" &
+elif "(${iteration} == ${iter_tot}) && (${seed} < 319)" "print 'The iteration number is maximum!'" "next seed" "variable iteration delete" "jump TaR.in loop" &
+elif "(${iteration} == ${iter_tot}) && (${seed} == 319)" "quit" &
+else &
+   "next iteration" &
+   "jump TaR.in iteration"
+
+label                   relaxation
+min_style               cg
+minimize                1.0e-30 1.0e-30 10000 10000
+variable                disp_threshold    equal     1.0
+variable                displacement      equal     sqrt((${x0}-${x_0})^2+(${y0}-${y_0})^2+(${z0}-${z_0})^2)
+if  "${displacement} >= ${disp_threshold}" then "print '${x0} ${y0} ${z0}' append end_site.dat screen no"
+
+#include      full_relaxation.mod
+#variable     back_delta  equal    0.0
+#variable     x_new       equal    ${x0}-${back_delta}*${unitx}
+#variable     y_new       equal    ${y0}-${back_delta}*${unity}
+#variable     z_new       equal    ${z0}-${back_delta}*${unitz}
+
+#include      verify_saddle.mod
+
+#variable     x_err      equal    abs(${x_0}-${x0})
+#variable     y_err      equal    abs(${y_0}-${y0})
+#variable     z_err      equal    abs(${z_0}-${z0})
+#if "(${x_err} < 0.01) && (${y_err} < 0.01) && (${z_err} < 0.01)" then "include full_relaxation.mod"
+
+if "${seed} < 319" then "next seed" "variable iteration delete" "jump TaR.in loop" else "print '${x_0} ${y_0} ${z_0}' file start_site.dat screen no" "quit"

@@ -1,0 +1,3 @@
+bash: backup: command not found
+/public/home/ziqiangw/.bashrc: line 30: syntax error near unexpected token `cp'
+/public/home/ziqiangw/.bashrc: line 30: `      cp $para bak_$para'

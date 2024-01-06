@@ -1,0 +1,26 @@
+LAMMPS (29 Oct 2020)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (../comm.cpp:94)
+  using 1 OpenMP thread(s) per MPI task
+########
+#
+########
+variable                delta             equal     0.02 # the step size should be larger otherwise the number of
+#the energy minimum sites is smaller
+variable                iter_tot          equal     150
+
+label                   loop
+variable                seed              loop     300 319 #20 simulations
+variable                iteration         loop      ${iter_tot} #The maximum ietration number per random direction
+variable                iteration         loop      150 
+clear
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (../comm.cpp:94)
+  using 1 OpenMP thread(s) per MPI task
+units                   metal
+atom_style              atomic
+dimension                   3
+boundary                p p p
+atom_modify             map array sort 0 0.0
+
+read_data               poslmp_carbon.dat
+Reading data file ...
+ERROR on proc 0: Unexpected end of data file (../read_data.cpp:948)

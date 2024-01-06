@@ -1,0 +1,113 @@
+LAMMPS (29 Oct 2020)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (../comm.cpp:94)
+  using 1 OpenMP thread(s) per MPI task
+
+
+
+units                   metal
+atom_style              atomic
+dimension                   3
+boundary                p p p
+atom_modify             map array sort 0 0.0
+
+read_data               poslmp_carbon.dat
+Reading data file ...
+  orthogonal box = (-122.39241 -121.13707 -37.090501) to (122.39241 121.13707 37.090501)
+  13 by 4 by 1 MPI processor grid
+  reading atoms ...
+  288751 atoms
+  read_data CPU = 0.443 seconds
+
+variable                zmax     equal    zhi
+variable                zmin     equal    zlo
+
+region                  inner   cylinder   z  1.16564  0.67298333  100.0  ${zmin}  ${zmax}  units  box
+region                  inner   cylinder   z  1.16564  0.67298333  100.0  -37.0905005093422  ${zmax}  units  box
+region                  inner   cylinder   z  1.16564  0.67298333  100.0  -37.0905005093422  37.0905005093422  units  box
+group                   inner   region     inner
+199981 atoms in group inner
+group                   outer   subtract   all  inner
+88770 atoms in group outer
+group                   carbon  type       2
+1 atoms in group carbon
+
+pair_style              eam/alloy
+pair_coeff              * * FeC-Becquart2013.eam.txt Fe C
+neighbor                0.3 bin
+neigh_modify            delay 0 check yes every 1
+
+compute                 force     carbon   reduce  sum  fx fy fz
+variable                fx    equal    c_force[1]
+variable                fy    equal    c_force[2]
+variable                fz    equal    c_force[3]
+variable                i      equal    288751
+variable                x1     equal    x[v_i]
+variable                y1     equal    y[v_i]
+variable                z1     equal    z[v_i]
+variable                x0     equal    ${x1}
+variable                x0     equal    2.64
+variable                y0     equal    ${y1}
+variable                y0     equal    1.2
+variable                z0     equal    ${z1}
+variable                z0     equal    18.18
+
+fix                     force    outer    setforce      0.0 0.0 0.0
+thermo_style            custom   step     v_fx v_fy v_fz pe ke etotal
+min_style               cg
+minimize                1.0e-30 1.0e-30 10000 10000
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 5.6
+  ghost atom cutoff = 5.6
+  binsize = 2.8, bins = 88 87 27
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair eam/alloy, perpetual
+      attributes: half, newton on
+      pair build: half/bin/atomonly/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 5.465 | 6.344 | 6.728 Mbytes
+Step v_fx v_fy v_fz PotEng KinEng TotEng 
+       0   0.21118314    1.9286167     2.569769   -1152447.8            0   -1152447.8 
+     150 -2.8755495e-05 -3.8978328e-05 -5.6187568e-05   -1152449.5            0   -1152449.5 
+Loop time of 3.32501 on 52 procs for 150 steps with 288751 atoms
+
+99.8% CPU use with 52 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152447.77787283  -1152449.45035257  -1152449.45035257
+  Force two-norm initial, final = 10.216433 0.00022998146
+  Force max component initial, final = 6.2558834 5.6187568e-05
+  Final line search alpha, max atom move = 1.0000000 5.6187568e-05
+  Iterations, force evaluations = 150 299
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.88643    | 2.4066     | 3.1454     |  42.2 | 72.38
+Neigh   | 6.7432e-05 | 0.019345   | 0.029168   |   5.9 |  0.58
+Comm    | 0.047328   | 0.53497    | 1.6913     |  65.5 | 16.09
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 4.1841e-05 | 0.0032882  | 0.0083123  |   3.6 |  0.10
+Other   |            | 0.3609     |            |       | 10.85
+
+Nlocal:        5552.90 ave        7912 max           0 min
+Histogram: 4 2 2 0 2 6 4 0 15 17
+Nghost:        6213.54 ave        8769 max         412 min
+Histogram: 4 0 4 0 8 0 4 5 7 20
+Neighs:       158427.0 ave      230607 max           0 min
+Histogram: 4 2 2 0 5 3 4 4 12 16
+
+Total # of neighbors = 8238203
+Ave neighs/atom = 28.530474
+Neighbor list builds = 3
+Dangerous builds = 0
+print                   "${x0} ${y0} ${z0} ${x1} ${y1} ${z1}" append info.dat
+2.64 1.2 18.18 2.91402359799235 1.02288111184069 18.3723301326076
+
+
+
+Total wall time: 0:00:04

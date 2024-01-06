@@ -1,0 +1,1554 @@
+LAMMPS (29 Oct 2020)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (../comm.cpp:94)
+  using 1 OpenMP thread(s) per MPI task
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (../comm.cpp:94)
+  using 1 OpenMP thread(s) per MPI task
+Reading data file ...
+  orthogonal box = (-122.39241 -121.13707 -37.090501) to (122.39241 121.13707 37.090501)
+  13 by 8 by 2 MPI processor grid
+  reading atoms ...
+  288751 atoms
+  read_data CPU = 0.372 seconds
+199981 atoms in group inner
+88770 atoms in group outer
+1 atoms in group carbon
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 5.6
+  ghost atom cutoff = 5.6
+  binsize = 2.8, bins = 88 87 27
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair eam/alloy, perpetual
+      attributes: half, newton on
+      pair build: half/bin/atomonly/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 0
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step v_fx v_fy v_fz PotEng KinEng TotEng 
+       0    1.5178512    -1.134074    2.5425392   -1152447.8            0   -1152447.8 
+     186 1.2677293e-06 -3.450168e-06 -7.6651992e-06   -1152449.5            0   -1152449.5 
+Loop time of 1.25266 on 208 procs for 186 steps with 288751 atoms
+
+99.8% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152447.78326524  -1152449.45035276  -1152449.45035276
+  Force two-norm initial, final = 10.182767 3.4045554e-05
+  Force max component initial, final = 4.5602547 9.3071870e-06
+  Final line search alpha, max atom move = 1.0000000 9.3071870e-06
+  Iterations, force evaluations = 186 371
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 4.9883e-05 | 0.83036    | 1.1193     |  30.3 | 66.29
+Neigh   | 1.4524e-05 | 0.0045743  | 0.0068792  |   3.2 |  0.37
+Comm    | 0.00050169 | 0.16686    | 0.69361    |  37.4 | 13.32
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.6656e-05 | 0.00099434 | 0.0027566  |   0.0 |  0.08
+Other   |            | 0.2499     |            |       | 19.95
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.44 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.8 ave       59782 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 104 28
+
+Total # of neighbors = 8238207
+Ave neighs/atom = 28.530488
+Neighbor list builds = 3
+Dangerous builds = 1
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 186
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+     186   -1152449.4            0   -1152449.4  0.019853573  0.010636014 -0.022144172 
+     366   -1152449.5            0   -1152449.5 3.1936919e-06 -3.7162639e-06 -8.2048766e-06 
+Loop time of 1.20658 on 208 procs for 180 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.44954615   -1152449.4501099   -1152449.4501099
+  Force two-norm initial, final = 0.11490896 6.7884859e-05
+  Force max component initial, final = 0.051178726 1.3872562e-05
+  Final line search alpha, max atom move = 1.0000000 1.3872562e-05
+  Iterations, force evaluations = 180 360
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 4.8178e-05 | 0.80852    | 1.0967     |  30.3 | 67.01
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.5155e-05 | 0.16478    | 0.68914    |  37.0 | 13.66
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.6281e-05 | 0.0014874  | 0.0033617  |   2.2 |  0.12
+Other   |            | 0.2318     |            |       | 19.21
+
+Nlocal:        1388.23 ave        2041 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.42 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59808 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238197
+Ave neighs/atom = 28.530454
+Neighbor list builds = 0
+Dangerous builds = 0
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 366
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+     366   -1152449.4            0   -1152449.4  0.032236314  0.026188635 -0.046572584 
+     537   -1152449.4            0   -1152449.4 7.8504327e-06 1.6555828e-05 -2.5867838e-07 
+Loop time of 1.13072 on 208 procs for 171 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.44678283   -1152449.4485357   -1152449.4485357
+  Force two-norm initial, final = 0.20367955 0.00016507409
+  Force max component initial, final = 0.088308812 2.3341027e-05
+  Final line search alpha, max atom move = 1.0000000 2.3341027e-05
+  Iterations, force evaluations = 171 342
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 4.548e-05  | 0.76313    | 1.0284     |  29.3 | 67.49
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.2735e-05 | 0.15052    | 0.63885    |  36.4 | 13.31
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.5061e-05 | 0.0014114  | 0.0031814  |   2.2 |  0.12
+Other   |            | 0.2157     |            |       | 19.07
+
+Nlocal:        1388.23 ave        2041 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.42 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59808 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238200
+Ave neighs/atom = 28.530464
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: 8.34696791735113e-07
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 537
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+     537   -1152449.4            0   -1152449.4  0.027029745  0.031516638 -0.048642321 
+     664   -1152449.4            0   -1152449.4 -4.3764276e-06 -3.0645112e-07 1.4759234e-05 
+Loop time of 0.898135 on 208 procs for 127 steps with 288751 atoms
+
+99.8% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.44385136  -1152449.44552386  -1152449.44552386
+  Force two-norm initial, final = 0.19836014 0.00012206146
+  Force max component initial, final = 0.082561191 2.3419154e-05
+  Final line search alpha, max atom move = 1.0000000 2.3419154e-05
+  Iterations, force evaluations = 127 254
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.4306e-05 | 0.57284    | 0.7768     |  25.3 | 63.78
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.2672e-05 | 0.11804    | 0.47787    |  30.9 | 13.14
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.2075e-05 | 0.0010519  | 0.0023862  |   1.9 |  0.12
+Other   |            | 0.2062     |            |       | 22.96
+
+Nlocal:        1388.23 ave        2041 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.42 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59808 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238201
+Ave neighs/atom = 28.530467
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: -1.22676906441351e-06
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 664
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+     664   -1152449.4            0   -1152449.4   0.02206626   0.03447964 -0.045918142 
+     841   -1152449.4            0   -1152449.4 -1.3519162e-06 8.525364e-07 8.4283628e-06 
+Loop time of 1.15613 on 208 procs for 177 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.43942561  -1152449.44103338  -1152449.44103338
+  Force two-norm initial, final = 0.19322991 3.0882925e-05
+  Force max component initial, final = 0.077658002 8.4283628e-06
+  Final line search alpha, max atom move = 1.0000000 8.4283628e-06
+  Iterations, force evaluations = 177 354
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 4.7345e-05 | 0.78778    | 1.0631     |  29.8 | 68.14
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.4293e-05 | 0.15477    | 0.65708    |  37.1 | 13.39
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.5487e-05 | 0.0014596  | 0.0033325  |   2.2 |  0.13
+Other   |            | 0.2121     |            |       | 18.35
+
+Nlocal:        1388.23 ave        2041 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.42 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59808 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238202
+Ave neighs/atom = 28.530471
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: -4.32771238541753e-07
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 841
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+     841   -1152449.4            0   -1152449.4  0.018622932  0.036448598 -0.042214549 
+     970   -1152449.4            0   -1152449.4 -3.676495e-06 -1.1584379e-05 -2.5148697e-06 
+Loop time of 0.846758 on 208 procs for 129 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.43346253  -1152449.43502116  -1152449.43502116
+  Force two-norm initial, final = 0.18910408 9.8239151e-05
+  Force max component initial, final = 0.073813443 1.9048433e-05
+  Final line search alpha, max atom move = 1.0000000 1.9048433e-05
+  Iterations, force evaluations = 129 258
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.4676e-05 | 0.57662    | 0.78034    |  25.6 | 68.10
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 3.9715e-05 | 0.11525    | 0.48698    |  31.7 | 13.61
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.0644e-05 | 0.0010644  | 0.0024037  |   1.9 |  0.13
+Other   |            | 0.1538     |            |       | 18.17
+
+Nlocal:        1388.23 ave        2041 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.42 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59808 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238202
+Ave neighs/atom = 28.530471
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: -1.56776505788807e-07
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 970
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+     970   -1152449.4            0   -1152449.4  0.016511141  0.038418481 -0.039353409 
+    1000   -1152449.4            0   -1152449.4 6.8909111e-05 0.00020667308 -1.6595814e-05 
+    1107   -1152449.4            0   -1152449.4 2.9139825e-06 1.106889e-05 6.7204412e-06 
+Loop time of 0.920371 on 208 procs for 137 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+      -1152449.4259339  -1152449.42745634  -1152449.42745634
+  Force two-norm initial, final = 0.186006 8.3104790e-05
+  Force max component initial, final = 0.07069243 1.7116806e-05
+  Final line search alpha, max atom move = 1.0000000 1.7116806e-05
+  Iterations, force evaluations = 137 274
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.6619e-05 | 0.61185    | 0.82997    |  26.3 | 66.48
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.2557e-05 | 0.12263    | 0.50698    |  32.2 | 13.32
+Output  | 0.00014301 | 0.00015099 | 0.00020035 |   0.0 |  0.02
+Modify  | 1.1974e-05 | 0.0011346  | 0.002565   |   1.9 |  0.12
+Other   |            | 0.1846     |            |       | 20.06
+
+Nlocal:        1388.23 ave        2041 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.42 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59808 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238201
+Ave neighs/atom = 28.530467
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: 3.85664507031152e-08
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 1107
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    1107   -1152449.4            0   -1152449.4  0.015335741  0.041045833 -0.037954959 
+    1249   -1152449.4            0   -1152449.4 1.4494498e-06 4.4779523e-07 -1.763984e-05 
+Loop time of 0.951291 on 208 procs for 142 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+      -1152449.4168245  -1152449.41832166  -1152449.41832166
+  Force two-norm initial, final = 0.18383072 8.1060994e-05
+  Force max component initial, final = 0.068012869 1.7639840e-05
+  Final line search alpha, max atom move = 1.0000000 1.7639840e-05
+  Iterations, force evaluations = 142 284
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.8261e-05 | 0.63778    | 0.86758    |  26.9 | 67.04
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.3596e-05 | 0.12916    | 0.54047    |  33.0 | 13.58
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.1739e-05 | 0.0011717  | 0.0026373  |   2.0 |  0.12
+Other   |            | 0.1832     |            |       | 19.26
+
+Nlocal:        1388.23 ave        2041 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.42 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.8 ave       59808 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238204
+Ave neighs/atom = 28.530478
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: 3.75367890394961e-07
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 1249
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    1249   -1152449.4            0   -1152449.4  0.014704952  0.044587511 -0.038268667 
+    1365   -1152449.4            0   -1152449.4 2.467573e-06 1.6268745e-07 -4.5862241e-05 
+Loop time of 0.772156 on 208 procs for 116 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.40613499  -1152449.40761583  -1152449.40761583
+  Force two-norm initial, final = 0.18241674 0.00021143108
+  Force max component initial, final = 0.06540807 4.5862241e-05
+  Final line search alpha, max atom move = 1.0000000 4.5862241e-05
+  Iterations, force evaluations = 116 232
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.1073e-05 | 0.51951    | 0.70508    |  24.2 | 67.28
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 3.6885e-05 | 0.10393    | 0.4317     |  29.7 | 13.46
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.0082e-05 | 0.00095935 | 0.0021851  |   0.0 |  0.12
+Other   |            | 0.1478     |            |       | 19.14
+
+Nlocal:        1388.23 ave        2041 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.42 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59808 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238200
+Ave neighs/atom = 28.530464
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: 8.49011394663072e-07
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 1365
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    1365   -1152449.4            0   -1152449.4  0.014353857   0.04950598 -0.040345123 
+    1569   -1152449.4            0   -1152449.4 -1.5253799e-06 -7.1983412e-06 -1.0790271e-05 
+Loop time of 1.35817 on 208 procs for 204 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.39388302  -1152449.39536089  -1152449.39536089
+  Force two-norm initial, final = 0.1818116 4.2923376e-05
+  Force max component initial, final = 0.062539916 1.0790271e-05
+  Final line search alpha, max atom move = 1.0000000 1.0790271e-05
+  Iterations, force evaluations = 204 408
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 5.4844e-05 | 0.91689    | 1.2481     |  32.3 | 67.51
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 6.4296e-05 | 0.18448    | 0.76367    |  39.8 | 13.58
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.8724e-05 | 0.001682   | 0.003813   |   2.4 |  0.12
+Other   |            | 0.2551     |            |       | 18.78
+
+Nlocal:        1388.23 ave        2041 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.42 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59808 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238198
+Ave neighs/atom = 28.530457
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: 2.38839039381036e-08
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 1569
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    1569   -1152449.4            0   -1152449.4  0.014191661  0.057236888 -0.045597986 
+    1713   -1152449.4            0   -1152449.4 4.8163918e-06 1.9097953e-05 -2.0922408e-05 
+Loop time of 0.946828 on 208 procs for 144 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.38012167  -1152449.38163634  -1152449.38163634
+  Force two-norm initial, final = 0.18279542 0.0001219998
+  Force max component initial, final = 0.059359143 2.4865745e-05
+  Final line search alpha, max atom move = 1.0000000 2.4865745e-05
+  Iterations, force evaluations = 144 288
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.8402e-05 | 0.64145    | 0.86854    |  27.0 | 67.75
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.6612e-05 | 0.12686    | 0.53344    |  33.4 | 13.40
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.2694e-05 | 0.0011908  | 0.0026805  |   2.0 |  0.13
+Other   |            | 0.1773     |            |       | 18.73
+
+Nlocal:        1388.23 ave        2041 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 97 35
+Nghost:        2437.42 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59798 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238197
+Ave neighs/atom = 28.530454
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: 1.19053913727982e-06
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 1713
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    1713   -1152449.4            0   -1152449.4  0.013937386  0.072638483 -0.058873129 
+    1906   -1152449.4            0   -1152449.4 9.9247284e-07 5.1520814e-06 -3.8335969e-06 
+Loop time of 1.26916 on 208 procs for 193 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.36505602  -1152449.36702822  -1152449.36702822
+  Force two-norm initial, final = 0.1891864 6.4529137e-05
+  Force max component initial, final = 0.072638483 1.0235903e-05
+  Final line search alpha, max atom move = 1.0000000 1.0235903e-05
+  Iterations, force evaluations = 193 386
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 5.1548e-05 | 0.86269    | 1.1692     |  31.3 | 67.97
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.9602e-05 | 0.17328    | 0.73478    |  38.6 | 13.65
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.5727e-05 | 0.0015896  | 0.0035871  |   2.3 |  0.13
+Other   |            | 0.2316     |            |       | 18.25
+
+Nlocal:        1388.23 ave        2041 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 97 35
+Nghost:        2437.42 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59798 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238193
+Ave neighs/atom = 28.530440
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: 8.32641672889358e-07
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 1906
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    1906   -1152449.4            0   -1152449.4 0.0025166613   0.13041481  -0.11071497 
+    2000   -1152449.4            0   -1152449.4 -3.7091047e-06 0.00011260563 -0.00015639168 
+    2133   -1152449.4            0   -1152449.4 -1.8400675e-07 3.0782688e-06 -5.1290905e-06 
+Loop time of 1.51087 on 208 procs for 227 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.35063638   -1152449.3579442   -1152449.3579442
+  Force two-norm initial, final = 0.23262883 5.9737307e-05
+  Force max component initial, final = 0.13041481 1.1432967e-05
+  Final line search alpha, max atom move = 1.0000000 1.1432967e-05
+  Iterations, force evaluations = 227 454
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 6.0408e-05 | 1.0113     | 1.3677     |  33.6 | 66.93
+Neigh   | 4.5199e-06 | 0.0015585  | 0.0023156  |   1.9 |  0.10
+Comm    | 0.00018945 | 0.2021     | 0.8365     |  41.5 | 13.38
+Output  | 9.0312e-05 | 9.2447e-05 | 0.00016374 |   0.0 |  0.01
+Modify  | 1.955e-05  | 0.0018708  | 0.0042442  |   2.5 |  0.12
+Other   |            | 0.2939     |            |       | 19.46
+
+Nlocal:        1388.23 ave        2041 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 97 35
+Nghost:        2437.42 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59798 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238191
+Ave neighs/atom = 28.530433
+Neighbor list builds = 1
+Dangerous builds = 0
+The dot product: 1.59695735963362e-06
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 2133
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    2133   -1152449.3            0   -1152449.3 -0.058481196   0.18302574   -0.1165239 
+    2353   -1152449.4            0   -1152449.4 -2.8480185e-06 2.2701988e-05 1.5458342e-06 
+Loop time of 1.47871 on 208 procs for 220 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.34487164  -1152449.35151159  -1152449.35151159
+  Force two-norm initial, final = 0.26504926 8.8192085e-05
+  Force max component initial, final = 0.18302574 2.2701988e-05
+  Final line search alpha, max atom move = 1.0000000 2.2701988e-05
+  Iterations, force evaluations = 220 440
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 5.8639e-05 | 0.9849     | 1.3392     |  33.4 | 66.61
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 6.7158e-05 | 0.19971    | 0.82404    |  40.8 | 13.51
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.8622e-05 | 0.0018176  | 0.0040938  |   2.5 |  0.12
+Other   |            | 0.2923     |            |       | 19.77
+
+Nlocal:        1388.23 ave        2041 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.42 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59796 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238196
+Ave neighs/atom = 28.530450
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: 3.739992931428e-06
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 2353
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    2353   -1152449.3            0   -1152449.3 -0.058415321   0.10640677 -0.056196177 
+    2509   -1152449.3            0   -1152449.3 8.9680646e-06 -2.4063997e-06 2.0457913e-05 
+Loop time of 1.04726 on 208 procs for 156 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+      -1152449.3398263  -1152449.34336737  -1152449.34336737
+  Force two-norm initial, final = 0.19158677 6.6277157e-05
+  Force max component initial, final = 0.10640677 2.0457913e-05
+  Final line search alpha, max atom move = 1.0000000 2.0457913e-05
+  Iterations, force evaluations = 156 312
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 4.1431e-05 | 0.69661    | 0.94359    |  28.0 | 66.52
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.8127e-05 | 0.13946    | 0.58294    |  34.2 | 13.32
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.3563e-05 | 0.0012875  | 0.0029139  |   2.1 |  0.12
+Other   |            | 0.2099     |            |       | 20.04
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.48 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59773 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 104 28
+
+Total # of neighbors = 8238202
+Ave neighs/atom = 28.530471
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: -1.9156718107198e-06
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 2509
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    2509   -1152449.3            0   -1152449.3 -0.036873276  0.041457365 -0.035940824 
+    2760   -1152449.3            0   -1152449.3 1.4355707e-05 -8.5693709e-06 2.0963839e-05 
+Loop time of 1.66057 on 208 procs for 251 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+      -1152449.3342452  -1152449.34567913  -1152449.34567913
+  Force two-norm initial, final = 0.15989093 8.3124172e-05
+  Force max component initial, final = 0.062459399 2.0963839e-05
+  Final line search alpha, max atom move = 1.0000000 2.0963839e-05
+  Iterations, force evaluations = 251 502
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 6.7281e-05 | 1.1213     | 1.5243     |  35.5 | 67.52
+Neigh   | 4.4992e-06 | 0.0015739  | 0.0023255  |   1.9 |  0.09
+Comm    | 0.00021604 | 0.22381    | 0.93529    |  44.1 | 13.48
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 2.2961e-05 | 0.0020687  | 0.0046664  |   2.6 |  0.12
+Other   |            | 0.3118     |            |       | 18.78
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.49 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59772 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 104 28
+
+Total # of neighbors = 8238202
+Ave neighs/atom = 28.530471
+Neighbor list builds = 1
+Dangerous builds = 0
+The dot product: -3.26417189259639e-06
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 2760
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    2760   -1152449.3            0   -1152449.3   0.02275638 0.0038421583   0.03644696 
+    2874   -1152449.3            0   -1152449.3 6.6097768e-06 -4.1268024e-06 6.6053188e-06 
+Loop time of 0.753433 on 208 procs for 114 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.34777758  -1152449.34876209  -1152449.34876209
+  Force two-norm initial, final = 0.13145344 0.0001122073
+  Force max component initial, final = 0.04825753 6.6097768e-06
+  Final line search alpha, max atom move = 1.0000000 6.6097768e-06
+  Iterations, force evaluations = 114 228
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 3.0849e-05 | 0.5099     | 0.69375    |  24.1 | 67.68
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 3.5227e-05 | 0.10157    | 0.4276     |  29.5 | 13.48
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 9.9509e-06 | 0.00094141 | 0.0021231  |   0.0 |  0.12
+Other   |            | 0.141      |            |       | 18.72
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.44 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59784 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238191
+Ave neighs/atom = 28.530433
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: 1.14164445039178e-07
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 2874
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    2874   -1152449.3            0   -1152449.3 0.0091105561 0.0064878513  0.018811993 
+    3000   -1152449.4            0   -1152449.4 1.8637567e-05 -4.3526274e-05 -5.3518692e-06 
+    3048   -1152449.4            0   -1152449.4 -1.2102428e-05 3.783024e-05 1.0858212e-05 
+Loop time of 1.18329 on 208 procs for 174 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.34988232  -1152449.35078637  -1152449.35078637
+  Force two-norm initial, final = 0.12513284 0.00016033106
+  Force max component initial, final = 0.047526054 3.7830240e-05
+  Final line search alpha, max atom move = 1.0000000 3.7830240e-05
+  Iterations, force evaluations = 174 348
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 4.6458e-05 | 0.78638    | 1.066      |  29.9 | 66.46
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.3645e-05 | 0.16159    | 0.67143    |  36.7 | 13.66
+Output  | 9.5701e-05 | 9.8167e-05 | 0.00017067 |   0.0 |  0.01
+Modify  | 1.4563e-05 | 0.0014361  | 0.0032718  |   2.2 |  0.12
+Other   |            | 0.2338     |            |       | 19.76
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.44 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59784 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238193
+Ave neighs/atom = 28.530440
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: 2.92892966383613e-08
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 3048
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    3048   -1152449.4            0   -1152449.4  0.010024633 0.0065449948  0.020264975 
+    3217   -1152449.4            0   -1152449.4 -3.1728352e-06 3.3217542e-05 2.0888131e-05 
+Loop time of 1.11488 on 208 procs for 169 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.35066621  -1152449.35156741  -1152449.35156741
+  Force two-norm initial, final = 0.12554854 0.00021918016
+  Force max component initial, final = 0.046966072 4.9733345e-05
+  Final line search alpha, max atom move = 1.0000000 4.9733345e-05
+  Iterations, force evaluations = 169 338
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 4.5047e-05 | 0.75238    | 1.0227     |  29.2 | 67.48
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.1723e-05 | 0.1483     | 0.62563    |  36.2 | 13.30
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.4581e-05 | 0.0013932  | 0.0031365  |   2.2 |  0.12
+Other   |            | 0.2128     |            |       | 19.09
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.44 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59784 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238189
+Ave neighs/atom = 28.530426
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: 5.0033799700358e-08
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 3217
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    3217   -1152449.4            0   -1152449.4 0.0092975442 0.0065907678  0.019261517 
+    3432   -1152449.4            0   -1152449.4 5.8252774e-07 -3.2090057e-06 -1.6077094e-06 
+Loop time of 1.43444 on 208 procs for 215 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.35012941  -1152449.35102271  -1152449.35102271
+  Force two-norm initial, final = 0.12501473 4.2430203e-05
+  Force max component initial, final = 0.046382258 3.7028957e-06
+  Final line search alpha, max atom move = 1.0000000 3.7028957e-06
+  Iterations, force evaluations = 215 430
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 5.7338e-05 | 0.96428    | 1.3172     |  33.1 | 67.22
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 6.5616e-05 | 0.19358    | 0.80654    |  41.0 | 13.50
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.7395e-05 | 0.0017711  | 0.0040108  |   2.4 |  0.12
+Other   |            | 0.2748     |            |       | 19.16
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.44 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59784 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238191
+Ave neighs/atom = 28.530433
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: -4.34988642101012e-09
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 3432
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    3432   -1152449.3            0   -1152449.3  0.008360716    0.0063987  0.017741192 
+    3614   -1152449.3            0   -1152449.3 -1.5137608e-05 -3.8111588e-07 -2.3377194e-05 
+Loop time of 1.20223 on 208 procs for 182 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.34824604  -1152449.34912649  -1152449.34912649
+  Force two-norm initial, final = 0.1240424 0.00013354468
+  Force max component initial, final = 0.045686351 3.7663607e-05
+  Final line search alpha, max atom move = 1.0000000 3.7663607e-05
+  Iterations, force evaluations = 182 364
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 4.8483e-05 | 0.81121    | 1.0979     |  30.3 | 67.48
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.6618e-05 | 0.16047    | 0.67816    |  37.6 | 13.35
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.5751e-05 | 0.0014999  | 0.0034264  |   2.2 |  0.12
+Other   |            | 0.229      |            |       | 19.05
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.46 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59774 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 104 28
+
+Total # of neighbors = 8238191
+Ave neighs/atom = 28.530433
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: -2.65944503370614e-08
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 3614
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    3614   -1152449.3            0   -1152449.3 0.0074035954 0.0059816452  0.016001224 
+    3800   -1152449.3            0   -1152449.3 -8.6708062e-06 3.3914257e-06 -1.059165e-05 
+Loop time of 1.24435 on 208 procs for 186 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.34500647  -1152449.34587276  -1152449.34587276
+  Force two-norm initial, final = 0.12304471 0.00010529129
+  Force max component initial, final = 0.044972151 1.0591650e-05
+  Final line search alpha, max atom move = 1.0000000 1.0591650e-05
+  Iterations, force evaluations = 186 372
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 4.9686e-05 | 0.83057    | 1.1319     |  30.7 | 66.75
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.7201e-05 | 0.16692    | 0.69915    |  37.8 | 13.41
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.5116e-05 | 0.0015319  | 0.0034728  |   2.3 |  0.12
+Other   |            | 0.2453     |            |       | 19.72
+
+Nlocal:        1388.23 ave        2041 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.48 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59805 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238190
+Ave neighs/atom = 28.530429
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: -7.19775365801957e-09
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 3800
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    3800   -1152449.3            0   -1152449.3 0.0066255225 0.0052788196  0.014294663 
+    3973   -1152449.3            0   -1152449.3 -3.7105597e-05 1.2641023e-05 -4.6859468e-05 
+Loop time of 1.13304 on 208 procs for 173 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.34040091  -1152449.34125524  -1152449.34125524
+  Force two-norm initial, final = 0.12230245 0.00018927544
+  Force max component initial, final = 0.044301522 4.6859468e-05
+  Final line search alpha, max atom move = 1.0000000 4.6859468e-05
+  Iterations, force evaluations = 173 346
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 4.6035e-05 | 0.76922    | 1.0438     |  29.5 | 67.89
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.2725e-05 | 0.15203    | 0.63584    |  36.5 | 13.42
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.5219e-05 | 0.0014226  | 0.0032104  |   2.2 |  0.13
+Other   |            | 0.2104     |            |       | 18.57
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.48 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59782 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238190
+Ave neighs/atom = 28.530429
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: -2.99514427033427e-08
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 3973
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    3973   -1152449.3            0   -1152449.3 0.0060388521 0.0042781971  0.012634505 
+    4000   -1152449.3            0   -1152449.3 -0.00013905726 0.00020039697 -5.5103842e-05 
+    4225   -1152449.3            0   -1152449.3 3.4440001e-07 1.1023086e-06 1.3977436e-06 
+Loop time of 1.67251 on 208 procs for 252 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.33441424  -1152449.33526209  -1152449.33526209
+  Force two-norm initial, final = 0.12188648 6.9749276e-06
+  Force max component initial, final = 0.044187372 1.6559610e-06
+  Final line search alpha, max atom move = 1.0000000 1.6559610e-06
+  Iterations, force evaluations = 252 504
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 6.715e-05  | 1.1259     | 1.5273     |  35.7 | 67.32
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 7.9683e-05 | 0.22694    | 0.95413    |  44.0 | 13.57
+Output  | 0.00012546 | 0.00012741 | 0.00017896 |   0.0 |  0.01
+Modify  | 2.0659e-05 | 0.0020758  | 0.0046987  |   2.6 |  0.12
+Other   |            | 0.3175     |            |       | 18.98
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.47 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59782 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 106 26
+
+Total # of neighbors = 8238192
+Ave neighs/atom = 28.530436
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: 1.33632395319639e-09
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 4225
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    4225   -1152449.3            0   -1152449.3 0.0057693707 0.0029473685  0.011187963 
+    4449   -1152449.3            0   -1152449.3 7.1631156e-06 -3.2098182e-06 8.458703e-06 
+Loop time of 1.49359 on 208 procs for 224 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+      -1152449.3270256  -1152449.32787218  -1152449.32787218
+  Force two-norm initial, final = 0.12189262 2.6871171e-05
+  Force max component initial, final = 0.043995091 8.4587030e-06
+  Final line search alpha, max atom move = 1.0000000 8.4587030e-06
+  Iterations, force evaluations = 224 448
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 5.9487e-05 | 0.99907    | 1.3514     |  33.6 | 66.89
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 6.849e-05  | 0.19971    | 0.83406    |  41.2 | 13.37
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.92e-05   | 0.0018488  | 0.0041653  |   2.5 |  0.12
+Other   |            | 0.293      |            |       | 19.61
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.47 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59772 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 104 28
+
+Total # of neighbors = 8238189
+Ave neighs/atom = 28.530426
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: 4.7114505200892e-09
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 4449
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    4449   -1152449.3            0   -1152449.3 0.0057683727 0.0013466567 0.0099334457 
+    4626   -1152449.3            0   -1152449.3 -6.1156064e-06 1.1345212e-05 -4.1382064e-07 
+Loop time of 1.17501 on 208 procs for 177 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.31820437   -1152449.3190555   -1152449.3190555
+  Force two-norm initial, final = 0.12222792 0.00014401956
+  Force max component initial, final = 0.043833626 1.2992106e-05
+  Final line search alpha, max atom move = 1.0000000 1.2992106e-05
+  Iterations, force evaluations = 177 354
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 4.7405e-05 | 0.79414    | 1.0841     |  30.1 | 67.59
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.4525e-05 | 0.15978    | 0.66567    |  37.1 | 13.60
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.4576e-05 | 0.0014607  | 0.003317   |   2.2 |  0.12
+Other   |            | 0.2196     |            |       | 18.69
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.48 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59772 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 104 28
+
+Total # of neighbors = 8238188
+Ave neighs/atom = 28.530422
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: -1.25703637348382e-09
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 4626
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    4626   -1152449.3            0   -1152449.3 0.0060206354 -0.0004902505 0.0088776061 
+    4809   -1152449.3            0   -1152449.3 -1.2065655e-05 6.6891432e-06 -1.3266074e-05 
+Loop time of 1.20517 on 208 procs for 183 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.30791951  -1152449.30877772  -1152449.30877772
+  Force two-norm initial, final = 0.12279471 0.00011185295
+  Force max component initial, final = 0.043661283 1.3266074e-05
+  Final line search alpha, max atom move = 1.0000000 1.3266074e-05
+  Iterations, force evaluations = 183 366
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 5.0774e-05 | 0.81488    | 1.1006     |  30.3 | 67.62
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.9934e-05 | 0.15995    | 0.67847    |  37.7 | 13.27
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.8016e-05 | 0.0015097  | 0.0034362  |   2.2 |  0.13
+Other   |            | 0.2288     |            |       | 18.99
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.45 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59772 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 104 28
+
+Total # of neighbors = 8238188
+Ave neighs/atom = 28.530422
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: -1.10187746663482e-08
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 4809
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    4809   -1152449.3            0   -1152449.3 0.0066025123 -0.0025361863  0.008163236 
+    4983   -1152449.3            0   -1152449.3 -3.6609171e-05 6.8424382e-06 -5.0990175e-05 
+Loop time of 1.16669 on 208 procs for 174 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.29614391   -1152449.2970077   -1152449.2970077
+  Force two-norm initial, final = 0.12346543 0.00017306303
+  Force max component initial, final = 0.043498227 5.0990175e-05
+  Final line search alpha, max atom move = 1.0000000 5.0990175e-05
+  Iterations, force evaluations = 174 348
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 4.6634e-05 | 0.78162    | 1.0698     |  29.8 | 66.99
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.3467e-05 | 0.15837    | 0.66425    |  36.7 | 13.57
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.4322e-05 | 0.0014367  | 0.0032497  |   2.2 |  0.12
+Other   |            | 0.2253     |            |       | 19.31
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.44 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59772 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 104 28
+
+Total # of neighbors = 8238189
+Ave neighs/atom = 28.530426
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: -4.28790167714202e-08
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 4983
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    4983   -1152449.3            0   -1152449.3 0.0076145478 -0.0046704221  0.008048201 
+    5000   -1152449.3            0   -1152449.3 0.0010330504 -0.00048958088  0.001206127 
+    5184   -1152449.3            0   -1152449.3 7.4067629e-06 4.1763425e-07 1.1762875e-05 
+Loop time of 1.31981 on 208 procs for 201 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.28285933  -1152449.28372424  -1152449.28372424
+  Force two-norm initial, final = 0.12410151 7.0687136e-05
+  Force max component initial, final = 0.043324998 1.5374424e-05
+  Final line search alpha, max atom move = 1.0000000 1.5374424e-05
+  Iterations, force evaluations = 201 402
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 5.3558e-05 | 0.89489    | 1.2162     |  31.8 | 67.80
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 6.1994e-05 | 0.1767     | 0.742      |  39.4 | 13.39
+Output  | 9.5856e-05 | 9.7344e-05 | 0.00014783 |   0.0 |  0.01
+Modify  | 1.7637e-05 | 0.0016547  | 0.0037299  |   2.3 |  0.13
+Other   |            | 0.2465     |            |       | 18.67
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.44 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59772 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 104 28
+
+Total # of neighbors = 8238186
+Ave neighs/atom = 28.530415
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: 1.06086058762862e-08
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 5184
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    5184   -1152449.3            0   -1152449.3 0.0092434184 -0.0067281316 0.0089602551 
+    5377   -1152449.3            0   -1152449.3 -2.4370347e-05 1.6231625e-05 -2.4818388e-05 
+Loop time of 1.30224 on 208 procs for 193 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.26806721   -1152449.2689258   -1152449.2689258
+  Force two-norm initial, final = 0.12466235 9.7930495e-05
+  Force max component initial, final = 0.043086389 2.4818388e-05
+  Final line search alpha, max atom move = 1.0000000 2.4818388e-05
+  Iterations, force evaluations = 193 386
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 5.1455e-05 | 0.86725    | 1.1737     |  31.4 | 66.60
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 6.0008e-05 | 0.17695    | 0.73739    |  38.3 | 13.59
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.5906e-05 | 0.0015895  | 0.003589   |   2.3 |  0.12
+Other   |            | 0.2564     |            |       | 19.69
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.46 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59772 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 104 28
+
+Total # of neighbors = 8238187
+Ave neighs/atom = 28.530419
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: -5.65614141522436e-08
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 5377
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    5377   -1152449.3            0   -1152449.3  0.011578245 -0.0084797496  0.011236494 
+    5592   -1152449.3            0   -1152449.3 -7.3051923e-06 3.1518376e-06 -8.8312028e-06 
+Loop time of 1.40719 on 208 procs for 215 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.25180163  -1152449.25264593  -1152449.25264593
+  Force two-norm initial, final = 0.12527304 3.7556244e-05
+  Force max component initial, final = 0.044895497 8.8312028e-06
+  Final line search alpha, max atom move = 1.0000000 8.8312028e-06
+  Iterations, force evaluations = 215 430
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 5.6888e-05 | 0.95584    | 1.2967     |  32.9 | 67.93
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 6.6057e-05 | 0.18927    | 0.79572    |  40.6 | 13.45
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.8761e-05 | 0.0017702  | 0.0040045  |   2.4 |  0.13
+Other   |            | 0.2603     |            |       | 18.50
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.46 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59762 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 104 28
+
+Total # of neighbors = 8238187
+Ave neighs/atom = 28.530419
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: -2.55935943914551e-08
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 5592
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    5592   -1152449.2            0   -1152449.2  0.015150219 -0.0098647719  0.015784053 
+    5762   -1152449.2            0   -1152449.2 1.9685938e-05 -6.00301e-06 2.5911029e-05 
+Loop time of 1.15229 on 208 procs for 170 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.23416374  -1152449.23500192  -1152449.23500192
+  Force two-norm initial, final = 0.12680928 0.00017428745
+  Force max component initial, final = 0.04814993 3.6903536e-05
+  Final line search alpha, max atom move = 1.0000000 3.6903536e-05
+  Iterations, force evaluations = 170 340
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 4.5535e-05 | 0.76553    | 1.0369     |  29.6 | 66.44
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 5.1634e-05 | 0.15752    | 0.63854    |  35.6 | 13.67
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 1.4045e-05 | 0.0014029  | 0.0032041  |   2.2 |  0.12
+Other   |            | 0.2278     |            |       | 19.77
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.46 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59762 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 104 28
+
+Total # of neighbors = 8238185
+Ave neighs/atom = 28.530412
+Neighbor list builds = 0
+Dangerous builds = 0
+The dot product: 1.27506424040894e-07
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 5762
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    5762   -1152449.2            0   -1152449.2   0.02078989 -0.010397688  0.024408297 
+    6000   -1152449.2            0   -1152449.2 -1.624682e-05 -9.6892847e-06 -3.3247975e-05 
+    6018   -1152449.2            0   -1152449.2 -1.0463077e-05 2.1293671e-06 -1.4753319e-05 
+Loop time of 1.70995 on 208 procs for 256 steps with 288751 atoms
+
+99.9% CPU use with 208 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -1152449.21544477  -1152449.24937566  -1152449.24937566
+  Force two-norm initial, final = 0.13206906 8.1904856e-05
+  Force max component initial, final = 0.051391731 1.4753319e-05
+  Final line search alpha, max atom move = 1.0000000 1.4753319e-05
+  Iterations, force evaluations = 256 512
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 6.7826e-05 | 1.1391     | 1.5428     |  35.8 | 66.62
+Neigh   | 4.5146e-06 | 0.0015541  | 0.0023235  |   1.9 |  0.09
+Comm    | 0.00018209 | 0.22667    | 0.95449    |  44.1 | 13.26
+Output  | 9.5712e-05 | 9.8687e-05 | 0.0001917  |   0.0 |  0.01
+Modify  | 2.2317e-05 | 0.0021089  | 0.0047502  |   2.6 |  0.12
+Other   |            | 0.3404     |            |       | 19.91
+
+Nlocal:        1388.23 ave        2040 max           0 min
+Histogram: 28 4 0 16 8 0 8 12 96 36
+Nghost:        2437.46 ave        3379 max           0 min
+Histogram: 24 0 8 8 16 4 12 4 30 102
+Neighs:        39606.7 ave       59762 max           0 min
+Histogram: 28 4 4 14 6 2 10 8 104 28
+
+Total # of neighbors = 8238187
+Ave neighs/atom = 28.530419
+Neighbor list builds = 1
+Dangerous builds = 0
+The dot product: -2.20563258593061e-06
+Setting atom values ...
+  1 settings made for x
+  1 settings made for y
+  1 settings made for z
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 6018
+Per MPI rank memory allocation (min/avg/max) = 5.425 | 5.522 | 5.555 Mbytes
+Step PotEng KinEng TotEng v_fx v_fy v_fz 
+    6018   -1152449.2            0   -1152449.2  0.029503187 -0.037300396  0.023946872 
